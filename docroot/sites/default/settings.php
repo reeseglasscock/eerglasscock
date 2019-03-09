@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'urvb667veh5b4p-IOoG5KcjQ-rLgb5OXUBKgDhezgUNfQX8eu_gUImfNmubr4jrqMmZsOzamAg';
 
 /**
  * Deployment identifier.
@@ -776,3 +776,14 @@ if (isset($_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR']) && file_exists($_SERVER['D
   require $_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR'] . '/loc_eerglasscock_dd.inc';
 }
 // </DDSETTINGS>
+$databases['default']['default'] = array (
+  'database' => 'sites/default/files/.sqlite',
+  'prefix' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\sqlite',
+  'driver' => 'sqlite',
+);
+$config_directories['sync'] = 'sites/default/files/config_0Nybar2XGFkoLoTpHUSUUFeTALfanj3m3ZbkLAfRJ9DBD1VqZKZW0fE_tZm7AFoiT7tWjsF6ow/sync';
+
+if (file_exists('/var/www/site-php')) {
+  require '/var/www/site-php/eerglasscock/eerglasscock-settings.inc';
+}
