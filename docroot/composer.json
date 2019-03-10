@@ -9,7 +9,8 @@
         "j7mbo/twitter-api-php": "^1.0",
         "league/oauth2-server": "~6.0",
         "webflo/drupal-core-strict": "~8.6.0",
-        "phpdocumentor/reflection-docblock": "^3.0||^4.0"
+        "phpdocumentor/reflection-docblock": "^3.0||^4.0",
+        "drupal/shield": "^1.2"
     },
     "replace": {
         "drupal/core": "^8.6"
