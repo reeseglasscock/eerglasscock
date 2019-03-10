@@ -1,0 +1,14 @@
+name: 'Comment test views'
+type: module
+description: 'Provides default views for views comment tests.'
+package: Testing
+version: VERSION
+core: 8.x
+dependencies:
+  - drupal:comment
+  - drupal:views
+
+# Information added by drush on 2019-02-20
+version: '8.6.10'
+project: 'drupal'
+datestamp: 1550687701

@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'J-fk5lBjLdrtpeXIM32q_HE0l6TNMSlCi_0t-uXNcmrpD8BbH_zQQ1w2i2k3Eoe_u3S1_7QMXg';
+$settings['hash_salt'] = '';
 
 /**
  * Deployment identifier.
@@ -768,10 +768,12 @@ $settings['entity_update_batch_size'] = 50;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
-  'database' => 'sites/default/files/.sqlite',
-  'prefix' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\sqlite',
-  'driver' => 'sqlite',
-);
-$config_directories['sync'] = 'sites/default/files/config_7ZTG7Pqhu5YlGAKwwHzWVTmwk80RRuuyC8LVHqYJ-l-AJshP6K6x4INs6onnbbsvGbjc6X59Gw/sync';
+
+
+// On Acquia Cloud, this include file configures Drupal to use the correct
+// database in each site environment (Dev, Stage, or Prod). To use this
+// settings.php for development on your local workstation, set $db_url
+// (Drupal 5 or 6) or $databases (Drupal 7 or 8) as described in comments above.
+if (file_exists('/var/www/site-php')) {
+  require('/var/www/site-php/eerglasscock/eerglasscock-settings.inc');
+}

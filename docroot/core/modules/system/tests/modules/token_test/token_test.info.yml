@@ -1,0 +1,13 @@
+name: Token test
+type: module
+core: 8.x
+package: Testing
+version: VERSION
+dependencies:
+ - drupal:user
+ - drupal:node
+
+# Information added by drush on 2019-02-20
+version: '8.6.10'
+project: 'drupal'
+datestamp: 1550687701

@@ -1,0 +1,13 @@
+name: File
+type: module
+description: 'Defines a file field type.'
+package: Field types
+version: VERSION
+core: 8.x
+dependencies:
+  - drupal:field
+
+# Information added by drush on 2019-02-20
+version: '8.6.10'
+project: 'drupal'
+datestamp: 1550687701
